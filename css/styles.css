@@ -13,43 +13,19 @@ html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
 body {
-    font-size: 16px;/*1rem = 10px */
+    font-size: 16px;
+    /*1rem = 10px */
     font-family: "Krub", sans-serif;
     font-weight: 400;
     font-style: normal;
-}
-
-h1 {
-    font-size: 3.8rem;
-}
-
-h2 {
-    font-size: 2.8rem;
-}
-
-h3 {
-    font-size: 1.8rem;
-}
-
-h1,h2,h3 {
-    text-align: center;
-}
-
-.titulo span {
-    font-size: 3rem;
-    font-family: "Stalemate", cursive;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
+    background-image: linear-gradient(to top, var(--gris) 0%, var(--blanco) 100%);
 }
 
 .boton {
@@ -72,6 +48,47 @@ h1,h2,h3 {
     }
 }
 
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.titulo span {
+    font-size: 3rem;
+    font-family: "Stalemate", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+
+
 .nav-bg {
     background-color: var(--secundario);
 }
@@ -82,7 +99,7 @@ h1,h2,h3 {
 }
 
 @media (min-width: 768px) {
-    .navegacion-principal{
+    .navegacion-principal {
         flex-direction: row;
         justify-content: space-between;
     }
@@ -109,6 +126,7 @@ h1,h2,h3 {
     background-size: cover;
     height: 450px;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero {
@@ -126,4 +144,35 @@ h1,h2,h3 {
 .contenido-hero h2,
 .contenido-hero p {
     color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: #adadad;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
